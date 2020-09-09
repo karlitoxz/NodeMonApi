@@ -4,7 +4,8 @@
   "description": "Node.js Rest API con Typescript, MongoDB y Visual Studio Code",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "start": "./build/server.js"
   },
   "author": "JuanRomero",
   "license": "ISC",
@@ -25,6 +26,7 @@
     "@types/helmet": "0.0.48",
     "@types/mongoose": "^5.7.36",
     "@types/morgan": "^1.9.1",
-    "nodemon": "^2.0.4"
+    "nodemon": "^2.0.4",
+    "tsc": "^1.20150623.0"
   }
 }
