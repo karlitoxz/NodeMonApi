@@ -14,3 +14,4 @@ Convertir de types a javaScript
     npm run build
     npm run start
 
+Iniciar 

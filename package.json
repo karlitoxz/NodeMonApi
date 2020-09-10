@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc",
-    "start": "./build/server.js"
+    "start": "nodemon ./build/server.js"
   },
   "author": "JuanRomero",
   "license": "ISC",
