@@ -14,4 +14,13 @@ Convertir de types a javaScript
     npm run build
     npm run start
 
-Iniciar 
+Iniciar servidor de mongoose
+    cd C:\Program Files\MongoDB\Server\3.6\bin
+    mongod.exe --dbpath D:\mongodb\data\db
+    
+    Abrir shell mongo
+        cd C:\Program Files\MongoDB\Server\3.6\bin
+        mongo
+    //crear base de datos:
+    use dbnodemonapi
+
