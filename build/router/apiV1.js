@@ -1,10 +1,10 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var express = require("express");
-var postController_1 = require("../controllers/postController");
-exports.default = (function (app) {
-    var apiRoutes = express.Router();
-    var postRoutes = express.Router();
+const express = require("express");
+const postController_1 = require("../controllers/postController");
+exports.default = (app) => {
+    const apiRoutes = express.Router();
+    const postRoutes = express.Router();
     /**
      * POST ROUTES
      */
@@ -15,5 +15,5 @@ exports.default = (function (app) {
     postRoutes.put('/:id', postController_1.updatePost);
     postRoutes.delete('/:id', postController_1.deletePost);
     app.use('/api', apiRoutes);
-});
+};
 //# sourceMappingURL=apiV1.js.map

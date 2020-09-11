@@ -1,8 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var mongoose = require("mongoose");
-var Schema = mongoose.Schema;
-var PostShema = new Schema({
+const mongoose = require("mongoose");
+const Schema = mongoose.Schema;
+const PostShema = new Schema({
     //Definicion de modelo
     timestamp: {
         type: Date,

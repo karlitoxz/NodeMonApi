@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var config = {
+const config = {
     //Puerto
     port: process.env.PORT || 3000,
     //Database

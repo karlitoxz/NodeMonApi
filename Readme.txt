@@ -21,6 +21,13 @@ Iniciar servidor de mongoose
     Abrir shell mongo
         cd C:\Program Files\MongoDB\Server\3.6\bin
         mongo
-    //crear base de datos:
-    use dbnodemonapi
+        crear base de datos:
+            use dbnodemonapi
+        insertar datos:
+            db.dbnodemonapi.insert({"title": 'mi primer post',"content": 'mi primer post content'}) 
+        ver datos insertados:
+            db.dbnodemonapi.find()
+
+Convertir el codigo
+    C:\xampp\htdocs\angular\NodeMonApi>tsc
 
