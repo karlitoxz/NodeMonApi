@@ -1,11 +1,12 @@
-import *  as express from 'express';
+import * as express from 'express';
+
 import {
     getAllPosts,
     getPostById,
     createPost,
     updatePost,
-    deletePost
-} from '../controllers/postController'
+    deletePost    
+} from '../controllers/PostController';
 
 export default (app) => {
 
@@ -16,7 +17,7 @@ export default (app) => {
      * POST ROUTES
      */
     
-    apiRoutes.use('/posts', postRoutes);
+     apiRoutes.use('/posts', postRoutes);
 
     postRoutes.get('/', getAllPosts);
 
@@ -31,3 +32,4 @@ export default (app) => {
     app.use('/api', apiRoutes);
 
 };
+

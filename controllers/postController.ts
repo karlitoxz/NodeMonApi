@@ -1,6 +1,5 @@
-import Post from '../models/posts';
+import Post from '../models/Posts';
 
-//Traer todos los post
 export function getAllPosts(req, res, next) {
     Post.find((err, posts) => {
         if(err) {
@@ -10,22 +9,18 @@ export function getAllPosts(req, res, next) {
     });
 }
 
-//Traer un solo post por su ID
-
 export function getPostById(req, res, next) {
-    const id = req.params.id;  
-  
-    Post.findById(id, (err, post) => {
-      if(err) {
-          res.status(500).json({err});
-      }
-      res.status(200).json({post});
-    });
-  }
+  const id = req.params.id;  
 
-  //Crear post
+  Post.findById(id, (err, post) => {
+    if(err) {
+        res.status(500).json({err});
+    }
+    res.status(200).json({post});
+  });
+}
 
-  export function createPost(req, res, next) {
+export function createPost(req, res, next) {
     const title = req.body.title;
     const content = req.body.content;
 
@@ -52,7 +47,6 @@ export function getPostById(req, res, next) {
     });
 }
 
-//Actualizar post por ID
 export function updatePost (req, res, next) {
     const id = req.params.id;
 
@@ -63,7 +57,7 @@ export function updatePost (req, res, next) {
         res.status(200).json({post});
     });
 }
-//Borrar post por ID
+
 export function deletePost(req, res, next) {
     const id = req.params.id;
 

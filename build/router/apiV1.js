@@ -1,19 +1,36 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const express = require("express");
-const postController_1 = require("../controllers/postController");
-exports.default = (app) => {
-    const apiRoutes = express.Router();
-    const postRoutes = express.Router();
+var express = require("express");
+exports.default = (function (app) {
+    var apiRoutes = express.Router();
+    var postRoutes = express.Router();
     /**
      * POST ROUTES
-     */
+     
+    app.get('/test', (req,res)=>{
+        res.end('Hello world!');
+    });
+    
     apiRoutes.use('/posts', postRoutes);
-    postRoutes.get('/', postController_1.getAllPosts);
-    postRoutes.get('/:id', postController_1.getPostById);
-    postRoutes.post('/', postController_1.createPost);
-    postRoutes.put('/:id', postController_1.updatePost);
-    postRoutes.delete('/:id', postController_1.deletePost);
-    app.use('/api', apiRoutes);
-};
+    
+    postRoutes.get('/', getAllPosts);
+
+    postRoutes.get('/:id', getPostById);
+
+    postRoutes.post('/', createPost);
+
+    postRoutes.put('/:id', updatePost);
+
+    postRoutes.delete('/:id', deletePost);
+
+    //app.use('/api', apiRoutes);*/
+    apiRoutes.get('/', function (req, res) {
+        res.end('Hello world!');
+    });
+    //Ruta cuando no hay archivo
+    apiRoutes.get('*', function (req, res) {
+        res.end('Archivo no encontrado - *');
+    });
+    app.use('/', apiRoutes);
+});
 //# sourceMappingURL=apiV1.js.map

@@ -1,9 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const mongoose = require("mongoose");
-const Schema = mongoose.Schema;
-const PostShema = new Schema({
-    //Definicion de modelo
+var mongoose = require("mongoose");
+var Schema = mongoose.Schema;
+var PostShema = new Schema({
     timestamp: {
         type: Date,
         default: Date.now
@@ -20,4 +19,4 @@ const PostShema = new Schema({
     }
 });
 exports.default = mongoose.model('Post', PostShema);
-//# sourceMappingURL=posts.js.map
+//# sourceMappingURL=Posts.js.map

@@ -1,13 +1,13 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const config = {
-    //Puerto
+var config = {
+    // port 
     port: process.env.PORT || 3000,
-    //Database
-    db: 'mongodb://localhost/dbnodemonapi',
-    //test enviroment
+    // database
+    db: 'mongodb://localhost/blog-demo-tutorial',
+    // test enviroment
     test_env: 'test',
-    test_db: 'mongodb://localhost/dbnodemonapi-test',
+    test_db: 'mongodb://localhost/blog-demo-test',
     test_port: 3001
 };
 exports.default = config;
