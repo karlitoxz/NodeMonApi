@@ -31,3 +31,21 @@ Iniciar servidor de mongoose
 Convertir el codigo
     C:\xampp\htdocs\angular\NodeMonApi>tsc
 
+Iniciar el app
+    node ./build/server.js
+
+//Descargar complemento visual studiocode 
+    Click en Extencions, REST Client
+    //enviar peticion:
+        GET http://localhost:3000/api/posts HTTP/1.1
+    //Separar peticion
+        ###
+        //enviar datos para grabar
+                POST http://localhost:3000/api/posts HTTP/1.1
+                content-type: application/json
+                {
+                    "title": "mi primer post",
+                    "content": "mi primer post content"
+                }
+
+    //Ver request.http
